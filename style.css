@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+
+body{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+.wrapper{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:20px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#add{
+    background: #efefef;
+    padding: 20px;
+    border-radius: 0 0 20px 20px ;
+
+
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 120px 10px -100px inset;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    gap:20px;
+}
+
+.info{
+    display: flex;
+    gap:20px;
+    padding: 20px 0 0 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+#add_book{
+    align-self: center;
+}
+
+#list{
+    width: 80%;
+    display: flex;
+    padding: 20px;
+    gap:20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #eee;
+}
+.card{
+    background: #d1d8e0;
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+
+
+
+#remove{
+    align-self: flex-end;
+}
+
+.buttons{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+i{
+    cursor:pointer;
+    color:#e74c3c;
+    transition: 0.2s;
+}
+
+i:hover{
+    filter: brightness(0.8);
+}
+#error{
+    align-self: center;
+    color:#e74c3c;
+    font-weight: bold;
+    display: none;
+}
+
+button {
+  background: #2ecc71;
+  border: 1px solid #2ecc71;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  transition: 0.1s;
+}
+
+button:hover,
+button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #2ecc71;
+}
+
+button:active {
+  opacity: .5;
+}
+
+#clear{
+    background: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+#clear:hover,#clear:active{
+    background-color: initial;
+    background-position: 0 0;
+    color: #e74c3c ;
+}
+
+#add_book{
+    background: #1abc9c;
+    border: 1px solid #1abc9c;
+}
+
+#add_book:hover,#add_book:active{
+    background-color: initial;
+    background-position: 0 0;
+    color: #1abc9c;
+}
+
+input {
+    padding:10px;
+}
+
+select {
+    padding: 10px;
+}
+
+.show{
+    display: none;
+    transition: 0.5s;
+}

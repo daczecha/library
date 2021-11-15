@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>My book library</h1>
+        </header>
+        <div class="buttons">
+            <button id = "open_form" onclick="openForm()">
+                Add Book
+            </button>
+            <button id = "clear" onclick="clearArray()">
+                Clear
+            </button>
+        </div>
+        <div id = "add" class="show">
+            <div id = "form">
+                <div class="info">
+                    <div class="container">
+                        <label for="title">Title</label>
+                        <br>
+                        <input name = "title" type="text" placeholder='e.g. "1984"'>
+                    </div>
+                    <div class="container">
+                        <label for="author">Author</label>
+                        <br>
+                        <input name = "author" type="text" placeholder="e.g. George Orwell">
+                    </div>
+                    <div class="container">
+                        <label for="pages">Pages</label>
+                        <br>
+                        <input name = "pages" type="number" min = 1 placeholder="e.g. 328">
+                    </div>  
+                    <div class="container">
+                        <label for="is_read">Have you read it?</label>
+                        <br>
+                        <select name = "is_read">
+                            <option value="read" selected="selected">Yes</option>
+                            <option value="not_read">No</option>
+                        </select>
+                    </div>
+                </div>
+                <p id = "error">Please fill all of the fields! </p>
+                <button id = "add_book"  onclick="addCard()">
+                    Submit
+                </button>
+            </div>
+        </div>
+        <div id="list" class="book-list">
+        </div>
+    </div>
+</body>
+<script src = "script.js"></script>
+</html>
