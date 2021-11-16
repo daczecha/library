@@ -17,7 +17,7 @@
             <button id = "open_form" onclick="openForm()">
                 Add Book
             </button>
-            <button id = "clear" onclick="clearArray()">
+            <button class = "red" id = "clear" onclick="clearArray()">
                 Clear
             </button>
         </div>
@@ -27,29 +27,29 @@
                     <div class="container">
                         <label for="title">Title</label>
                         <br>
-                        <input name = "title" type="text" placeholder='e.g. "1984"'>
+                        <input name = "title" type="text" placeholder='e.g. "1984"' id = "title">
                     </div>
                     <div class="container">
                         <label for="author">Author</label>
                         <br>
-                        <input name = "author" type="text" placeholder="e.g. George Orwell">
+                        <input name = "author" type="text" placeholder="e.g. George Orwell" id = "author">
                     </div>
                     <div class="container">
                         <label for="pages">Pages</label>
                         <br>
-                        <input name = "pages" type="number" min = 1 placeholder="e.g. 328">
+                        <input name = "pages" type="number" min = 1 max = 9999 placeholder="e.g. 328" id = "pages">
                     </div>  
                     <div class="container">
                         <label for="is_read">Have you read it?</label>
                         <br>
-                        <select name = "is_read">
+                        <select name = "is_read" id = "read">
                             <option value="read" selected="selected">Yes</option>
                             <option value="not_read">No</option>
                         </select>
                     </div>
                 </div>
-                <p id = "error">Please fill all of the fields! </p>
-                <button id = "add_book"  onclick="addCard()">
+                <p id = "error"></p>
+                <button id = "add_book"  onclick="addBook()">
                     Submit
                 </button>
             </div>

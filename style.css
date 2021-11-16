@@ -52,6 +52,8 @@ header{
     display: flex;
     gap:20px;
     padding: 20px 0 0 10px;
+    flex-wrap: wrap;
+justify-content: center;
 }
 
 .container{
@@ -73,7 +75,7 @@ header{
     border-top: 1px solid #eee;
 }
 .card{
-    background: #d1d8e0;
+    background: white;
     padding:30px;
     display: flex;
     flex-direction: column;
@@ -81,8 +83,15 @@ header{
     gap:30px;
     border-radius: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
 
+    -webkit-box-shadow: -6px 5px 0px 1px rgba(0, 0, 0, 0.4); 
+    box-shadow: -6px 5px 0px 1px rgba(0, 0, 0, 0.4);
+
+    transition: 0.4s;
+}
 .content{
     display: flex;
     flex-direction: column;
@@ -93,7 +102,7 @@ header{
 
 
 
-#remove{
+.fa-times{
     align-self: flex-end;
 }
 
@@ -117,7 +126,6 @@ i:hover{
     align-self: center;
     color:#e74c3c;
     font-weight: bold;
-    display: none;
 }
 
 button {
@@ -157,12 +165,12 @@ button:active {
   opacity: .5;
 }
 
-#clear{
+.red{
     background: #e74c3c;
     border: 1px solid #e74c3c;
 }
 
-#clear:hover,#clear:active{
+.red:hover,.red:active{
     background-color: initial;
     background-position: 0 0;
     color: #e74c3c ;
@@ -190,4 +198,9 @@ select {
 .show{
     display: none;
     transition: 0.5s;
+}
+
+h2, em, p{
+    word-break: break-all;
+    text-align: center;
 }
