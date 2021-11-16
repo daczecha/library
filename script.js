@@ -6,7 +6,6 @@ class Book {
         this.isRead = isRead;
     }    
 }
-let bookArray = [];
 //Forms
 const titleForm = document.getElementById("title");
 const authorForm = document.getElementById("author");
@@ -30,7 +29,6 @@ titleForm.onkeypress = function(e) {
 };
 
 let bookArr = JSON.parse(localStorage.getItem("bookArray"));
-
 const bookList = document.getElementById("list");
 showCards();
 
@@ -48,6 +46,7 @@ function addBook(){
     titleForm.value = "";
     authorForm.value = "";
     pagesForm.value = "";
+
     showCards();
 }
 
