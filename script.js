@@ -30,7 +30,12 @@ titleForm.onkeypress = function(e) {
 
     
 let bookArr = [];
-bookArr =  JSON.parse(localStorage.getItem("bookArray"));
+
+if(!localStorage.getItem('bookArray')){
+    localStorage.setItem('bookArray', JSON.stringify(bookArr));
+}else{
+    bookArr =  JSON.parse(localStorage.getItem("bookArray"));
+}
 const bookList = document.getElementById("list");
 showCards();
 
