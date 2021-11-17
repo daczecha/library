@@ -109,7 +109,6 @@ function showCards () {
     }
 }
 
-
 function removeCard(num){
     num = num.slice(0,1);
     num = Number(num);
