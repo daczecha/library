@@ -28,7 +28,9 @@ titleForm.onkeypress = function(e) {
     return "'`\" qwertyuiopasdfghjklzxcvbnm.,-1234567890QWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*()ქწერტყუიოპასდფგჰჯკლზხცვბნმჭღთშჟძჩ".indexOf(String.fromCharCode(e.which)) >= 0;
 };
 
-let bookArr = JSON.parse(localStorage.getItem("bookArray"));
+    
+let bookArr = [];
+bookArr =  JSON.parse(localStorage.getItem("bookArray"));
 const bookList = document.getElementById("list");
 showCards();
 
@@ -62,7 +64,7 @@ function openForm(){
 }
 
 function showCards () {
-    if(bookArr.length == 0){
+    if(JSON.parse(localStorage.getItem("bookArray")).length == 0){
         while (bookList.firstChild) {
             bookList.removeChild(bookList.firstChild);
         }
@@ -70,7 +72,7 @@ function showCards () {
     while (bookList.firstChild) {
         bookList.removeChild(bookList.firstChild);
     }
-    for(let i = 0; i < bookArr.length ; i++){
+    for(let i = 0; i < JSON.parse(localStorage.getItem("bookArray")).length ; i++){
             const card = document.createElement("div");
             card.classList.add('card');
 
@@ -78,12 +80,12 @@ function showCards () {
             `
             <i onclick = "removeCard(this.id)" id = "${i}i" class="fas fa-times"></i>
             <div class="content">
-                <h2 id = "card_title">"${bookArr[i].title}"</h2>
-                <em id = "card_author">-${bookArr[i].author}</em>
-                <p>Pages: <span id = "card_pages">${bookArr[i].pages}</span></p>
+                <h2 id = "card_title">"${JSON.parse(localStorage.getItem("bookArray"))[i].title}"</h2>
+                <em id = "card_author">-${JSON.parse(localStorage.getItem("bookArray"))[i].author}</em>
+                <p>Pages: <span id = "card_pages">${JSON.parse(localStorage.getItem("bookArray"))[i].pages}</span></p>
             </div>
             ${
-                (bookArr[i].isRead ? 
+                (JSON.parse(localStorage.getItem("bookArray"))[i].isRead ? 
                     `
                     <button onclick = "changeRead(this.id)" id = "${i}b">
                         Read
